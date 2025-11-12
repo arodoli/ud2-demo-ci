@@ -5,9 +5,9 @@ name: Node.js CI
 # Se ejecutará en push a 'main' y en Pull Requests que apunten a 'main'
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 # Los "trabajos" a ejecutar
 jobs:
