@@ -41,6 +41,19 @@ app.get('/restar', (req, res) => {
   res.send(`El resultado de restar ${a} - ${b} es ${resultado}`);
 });
 
+// Definimos una ruta para multiplicar
+app.get('/multiplicar', (req, res) => {
+  const a = parseFloat(req.query.a);
+  const b = parseFloat(req.query.b);
+
+  if (isNaN(a) || isNaN(b)) {
+    return res.status(400).send('Error: "a" y "b" deben ser números.');
+  }
+  
+  const resultado = multiplicar(a, b);
+  res.send(`El resultado de multiplicar ${a} * ${b} es ${resultado}`);
+});
+
 // Ponemos el servidor a "escuchar" en el puerto definido
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
