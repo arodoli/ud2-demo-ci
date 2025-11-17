@@ -1,7 +1,7 @@
 // Importamos la librería Express
 const express = require('express');
 // Importamos nuestras funciones de la calculadora
-const { sumar, restar } = require('./calculadora');
+const { sumar, restar, multiplicar } = require('./calculadora');
 
 // Creamos la aplicación de Express
 const app = express();
