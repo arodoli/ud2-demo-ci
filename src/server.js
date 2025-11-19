@@ -54,6 +54,11 @@ app.get('/multiplicar', (req, res) => {
   res.send(`El resultado de multiplicar ${a} * ${b} es ${resultado}`);
 });
 
+
+pp.get('/mensaje', (req, res) => {
+  res.send('¡Este es un mensaje desde la ruta /mensaje!');
+});
+
 // Ponemos el servidor a "escuchar" en el puerto definido
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
